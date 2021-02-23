@@ -1,0 +1,110 @@
+/*Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*All elements*/
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	outline:none;
+	font-family:'Roboto',sans-serif;
+}
+
+/*Background For Page*/
+body{
+	background: #4169e1;
+}
+
+/*Form*/
+.container{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	max-width:350px;
+	width:100%;
+	background:#fff;
+	padding:25px;
+	border-radius:5px;
+	box-shadow:4px 4px 2px rgba(173,216,230);
+}
+
+/*Form Heading*/
+.container  h2{
+	text-align:center;
+	margin-bottom:20px;
+	text-transform:uppercase;
+	letter-spacing:4px;
+	color:#332902;
+}
+
+/*User Input*/
+.container .user_input{
+	margin-bottom:10px;
+}
+
+.container .user_input input[type="text"],
+.container textarea{
+	width:100%;
+	border:1px solid #e0e0e0;
+	padding:10px;
+}
+
+
+.container textarea{
+	height:80px;
+	resize:none;
+}
+
+/*Form Button*/
+.container .btn input[type="submit"]{
+	text-transform:uppercase;
+	letter-spacing:4px;
+	font-weight:bold;
+	border:0;
+	margin-top:15px;
+	padding:10px;
+	width:100%;
+	background:#4169e1;
+	color:#332902;
+	border-radius:25px;
+	cursor:pointer;
+}
+
+/*Form Error Message*/
+.container #error_msg{
+	margin-bottom:20px;
+	padding:0px;
+	background:#fe8b8e;
+	text-align:center;
+	font-size:14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

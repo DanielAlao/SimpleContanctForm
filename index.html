@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact Form</title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+<!--Simple Form-->
+<div class="container">
+	<h2>Contact Us<i class="fa fa-phone-square"></i></h2>
+	<div id="error_msg"></div>
+	
+	<form id="form" onsubmit="return form_validation()">
+		<div class="user_input">
+			<input type="text" placeholder="Name" id="name">
+		</div>
+		<div class="user_input">
+			<input type="text" placeholder="Reason" id="reason">
+		</div>
+		<div class="user_input">
+		<div class="user_input">
+			<input type="text" placeholder="Phone" id="phone">
+		</div>
+			<input type="text" placeholder="Email" id="email">
+		</div>
+		<div class="user_input">
+			<textarea id="message" placeholder="Message"></textarea>
+		</div>
+		<div class="btn">
+			<input type="submit">
+		</div>
+	</form>
+</div>
+
+
+
+<!--Javascript Validation-->
+<script>
+	function form_validation(){
+		var name = document.getElementById("name").value;
+		var reason = document.getElementById("reason").value;
+		var phone = document.getElementById("phone").value;
+		var email = document.getElementById("email").value;
+		var message = document.getElementById("message").value;
+		var error_msg = document.getElementById("error_msg");
+		var text;
+		
+		error_msg.style.padding="10px";
+		
+		if(name.length <5){
+			text = "Name Must More Than 5 Characters";
+			error_msg.innerHTML = text;
+			return false;
+		}
+		
+		if(reason.length <10){
+			text = "Plese Enter Valid Reason";
+			error_msg.innerHTML = text;
+			return false;
+		}
+		
+		if(isNaN(phone)|| phone.length != 11){
+			text = "Plese Enter Valid Phone Number";
+			error_msg.innerHTML = text;
+			return false;
+		}
+		
+		if(email.indexOf("@") == -1 || email.length < 6){
+			text = "Plese Enter Valid Email";
+			error_msg.innerHTML = text;
+			return false;
+		}
+		
+		if (message.length > 100){
+			text = "Please Enter No More Than 100 Characters";
+			error_msg.innerHTML = text;
+			return false;
+		}
+		
+		<!---Returns User Detail When Submit-->
+		alert("\n Name: " + name + "\n Reason: " + reason + "\n Phone Number: " + phone + "\n Email: " + email + "\n Your Message: " + message);
+		return true;
+	}
+</script>
+</body>
+</html>
